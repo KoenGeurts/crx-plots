@@ -56,9 +56,9 @@
       border: none;
       width: 100%;
       max-width:620px;
-      height: 800px;
+      height: 800px; /* Fixed height for desktop */
       display: block;
-      aspect-ratio: 2 / 3; /* keeps plot proportional */
+      aspect-ratio: 3 / 4; /* keeps plot proportional */
     }
 
     footer {
@@ -75,11 +75,20 @@
     @media (max-width: 768px) {
       main {
         grid-template-columns: 1fr; /* single column on small screens */
+        padding: 1rem;
+        gap: 1rem;
       }
+      .plot-card {
+        padding: 10px; /* Reduce padding on mobile */
+      }
+      
       iframe {
-        max-width: 100%;
+        height: 400px; /* Smaller height for mobile */
+        min-height: 300px; /* Minimum height */
+        /* max-width: 100%; */
         width: 100%;
         height: auto;
+        aspect-ratio: 3 / 4; /* keeps plot proportional */
       }
   }
   </style>
