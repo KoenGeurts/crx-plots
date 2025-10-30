@@ -3,97 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Koen Geurts — Plot Gallery</title>
-  <style>
-    body {
-      font-family: "Inter", system-ui, sans-serif;
-      margin: 0;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.5;
-    }
-    header {
-      background: #14532d;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    main {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1400px; /* FIXED: Increased max-width */
-      margin: 0 auto; /* FIXED: Center the grid */
-    }
-    
-    .plot-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
-      gap: 20px;
-      max-width: 700px; /* Centers layout on big screens */
-      width: 100%;
-    }
-
-    .plot-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;      /* STACK CHILDREN VERTICALLY */
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.2s ease;
-      overflow: hidden; /* FIXED: Prevent overflow */
-    }
-    
-    .plot-card:hover {
-      transform: scale(1.02);
-    }
-    
-    iframe {
-      border: none;
-      width: 100%;
-      max-width:620px;
-      height: 800px; /* Fixed height for desktop */
-      display: block;
-      aspect-ratio: 3 / 4; /* keeps plot proportional */
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      font-size: 0.8rem;
-    }
-    a {
-      color: #14532d;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        grid-template-columns: 1fr; /* single column on small screens */
-        padding: 1rem;
-        gap: 1rem;
-      }
-      .plot-card {
-        padding: 10px; /* Reduce padding on mobile */
-      }
-      
-      iframe {
-        height: 400px; /* Smaller height for mobile */
-        min-height: 300px; /* Minimum height */
-        /* max-width: 100%; */
-        width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 4; /* keeps plot proportional */
-      }
-  }
-  </style>
+  <title>Mijn Investering — CRX</title>
+  <link rel="stylesheet" href="iz_styles.css">
 </head>
 <body>
+ 
+  <nav class="navigation">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="iz_VAMA.html" class="nav-link">VAMA</a>
+    <a href="iz_HEHO.html" class="nav-link">HEHO</a>
+  </nav>
+
   <header>
     <h1>Mijn Investering</h1>
     <p>Interactive plots with my personal analytics to make data-driven investment descisions.</p>
@@ -101,37 +21,37 @@
 
   <main>
     <div class="plot-card">
-      <iframe src="workflow_plots/portfolio_gauge_Equity.html"></iframe>
+      <iframe src="workflow_plots/CRX_Equity_portfolio_gauge.html"></iframe>
       <p style="text-align:center;">Equity sentiment</p>
     </div>
     <div class="plot-card">
-      <iframe src="workflow_plots/portfolio_gauge_Commodities.html"></iframe>
+      <iframe src="workflow_plots/CRX_Commodities_portfolio_gauge.html"></iframe>
       <p style="text-align:center;">Commodities sentiment</p>
     </div>
     <div class="plot-card">
-      <iframe src="workflow_plots/portfolio_gauge_Bonds_n_Financials.html"></iframe>
+      <iframe src="workflow_plots/CRX_Bonds_n_Financials_portfolio_gauge.html"></iframe>
       <p style="text-align:center;">Bond and financials sentiment</p>
     </div>
     <div class="plot-card">
-      <iframe src="workflow_plots/portfolio_gauge_Fossil_Fuels.html"></iframe>
+      <iframe src="workflow_plots/CRX_Fossil_Fuels_portfolio_gauge.html"></iframe>
       <p style="text-align:center;">Fossil fuels sentiment</p>
     </div>
 
 
     <div class="plot-card">
-      <iframe src="workflow_plots/sentiment_close_Equity.html"></iframe>
+      <iframe src="workflow_plots/CRX_Equity_sentiment_close.html"></iframe>
       <p style="text-align:center;">2 year evolution in equity</p>
     </div>
    <div class="plot-card">
-      <iframe src="workflow_plots/sentiment_close_Commodities.html"></iframe>
+      <iframe src="workflow_plots/CRX_Commodities_sentiment_close.html"></iframe>
       <p style="text-align:center;">2 year evolution in commodities</p>
     </div>
     <div class="plot-card">
-      <iframe src="workflow_plots/sentiment_close_Bonds_n_Financials.html"></iframe>
+      <iframe src="workflow_plots/CRX_Bonds_n_Financials_sentiment_close.html"></iframe>
       <p style="text-align:center;">2 year evolution in bonds and financials</p>
     </div>
     <div class="plot-card">
-      <iframe src="workflow_plots/sentiment_close_Fossil_Fuels.html"></iframe>
+      <iframe src="workflow_plots/CRX_Fossil_Fuels_sentiment_close.html"></iframe>
       <p style="text-align:center;">2 year evolution in fossil fuels</p>
     </div>
 
@@ -141,7 +61,7 @@
       <p style="text-align:center;">Relevant ETF tickers (Yahoo Finance)</p>
     </div>
     <div class="plot-card">
-      <iframe src="workflow_plots/futures.html"></iframe>
+      <iframe src="workflow_plots/CRX_futures.html"></iframe>
       <p style="text-align:center;">Settlement dates of relevant future contracts</p>
     </div>
   </main>
