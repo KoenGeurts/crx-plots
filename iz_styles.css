@@ -10,7 +10,7 @@
       color: #222;
       line-height: 1.5;
       /* Background image settings */
-      background-image: url('../website_plots/DSC_3299.jpg');
+      background-image: url('./website_plots/DSC_3299.jpg');
       background-size: cover;        /* Scales image to cover entire viewport */
       background-position: center;   /* Centers the image */
       background-repeat: no-repeat;  /* Prevents image repetition */
